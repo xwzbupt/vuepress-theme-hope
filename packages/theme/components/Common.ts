@@ -24,6 +24,8 @@ export default class Common extends Mixins(GlobalEncryptMixin) {
 
   private hideNavbar = false;
 
+  private isMobile = false;
+
   private touchStart: { clientX: number; clientY: number } = {
     clientX: 0,
     clientY: 0,
@@ -70,6 +72,7 @@ export default class Common extends Mixins(GlobalEncryptMixin) {
 
     return [
       {
+        mobile: this.isMobile,
         "has-navbar": this.enableNavbar,
         "has-sidebar": this.enableSidebar,
         "has-anchor": this.enableAnchor,

@@ -27,7 +27,7 @@
     margin-bottom 12px
     transition all 0.3s
 
-    @media (max-width $MQMobile)
+    .mobile &
       display none
 
     .blogger-info

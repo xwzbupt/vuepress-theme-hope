@@ -35,10 +35,10 @@
   font-size 16px
   overflow-y auto
 
-  @media (max-width $MQMobile)
+  .mobile &
     top $navbarMobileHeight
 
-    .theme-container.hide-navbar &
+    .hide-navbar&
       top 0
 
   .theme-container:not(.has-navbar) &
@@ -92,21 +92,20 @@
     width $mobileSidebarWidth
     font-size 15px
 
-  @media (min-width ($MQMobile + 1px))
-    .theme-container:not(.has-sidebar) &
-      display none
+  .theme-container:not(.has-sidebar):not(.mobile) &
+    display none
 
   // wide mobile
-  @media (max-width $MQMobile)
+  .mobile &
     transform translateX(-100%)
-    transition transform 0.2s ease
+    transition height 0.2s ease, transform 0.2s ease
     box-shadow none
 
-    .theme-container.sidebar-open &
+    .sidebar-open&
       transform translateX(0)
       box-shadow 2px 0 8px var(--card-shadow-color)
 
-    .theme-container:not(.has-navbar) &
+    .theme-container:not(.has-navbar)&
       top 0
 
     .blogger-info.mobile

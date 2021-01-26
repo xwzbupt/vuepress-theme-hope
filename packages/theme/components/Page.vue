@@ -57,19 +57,15 @@
   padding-bottom 2rem
   background var(--bgcolor)
 
-  @media (max-width $MQMobile)
-    min-height 100vh
-
   // narrow desktop / iPad
   @media (max-width $MQNarrow)
     padding-left $mobileSidebarWidth
 
-  @media (min-width ($MQMobile + 1px))
-    .theme-container:not(.has-sidebar) &
-      padding-left 0
+  .theme-container:not(.has-sidebar):not(.mobile) &
+    padding-left 0
 
   // wide mobile
-  @media (max-width $MQMobile)
+  .mobile &
     padding-left 0
 
   @media (min-width $MQWide)

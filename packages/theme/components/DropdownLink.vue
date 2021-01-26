@@ -68,11 +68,11 @@
 .dropdown-wrapper
   cursor pointer
 
-  @media (max-width $MQMobile)
+  .mobile &
     &.open .dropdown-title
       margin-bottom 0.5rem
 
-  @media (min-width $MQMobile)
+  .theme-container:not(.mobile) &
     height 1.8rem
 
     &:hover .nav-dropdown, &.open .nav-dropdown
@@ -89,7 +89,7 @@
     font-weight 500
     line-height 1.4rem
 
-    @media (max-width $MQMobile)
+    .mobile &
       display none
 
     &::after
@@ -109,7 +109,7 @@
     font-weight 600
     font-size inherit
 
-    @media (max-width $MQMobile)
+    .mobile &
       display block
       color var(--text-color)
 
@@ -117,12 +117,12 @@
       color var(--accent-color)
 
   .nav-dropdown
-    @media (max-width $MQMobile)
+    .mobile &
       margin-top 0.25rem
       transition height 0.1s ease-out
       overflow hidden
 
-    @media (min-width $MQMobile)
+    .theme-container:not(.mobile) &
       display none
       box-sizing border-box
       position absolute
@@ -152,7 +152,7 @@
       color var(--dark-grey)
       font-size 0.9rem
 
-      @media (max-width $MQMobile)
+      .mobile &
         margin-top 0
         padding-top 0
         border-top 0
@@ -167,7 +167,7 @@
       font-weight 400
       line-height 1.7rem
 
-      @media (min-width $MQMobile)
+      .theme-container:not(.mobile) &
         color var(--dark-grey)
 
       &:hover
@@ -188,7 +188,7 @@
           border-bottom 3px solid transparent
 
     & > .nav-link
-      @media (max-width $MQMobile)
+      .mobile &
         font-size 15px
         line-height 2rem
 
@@ -199,7 +199,7 @@
     .dropdown-subitem
       font-size 0.9em
 
-      @media (max-width $MQMobile)
+      .mobile &
         padding-left 1rem
 
     &:first-child h4

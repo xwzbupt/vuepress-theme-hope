@@ -1,3 +1,4 @@
+/* eslint-disable vue/require-explicit-emits */
 import Vue from "vue";
 import { AlgoliaOption } from "@mr-hope/vuepress-types";
 import AlgoliaSearchBox from "@AlgoliaSearchBox";
@@ -37,10 +38,14 @@ export default Vue.extend({
     ThemeColor,
   },
 
-  data: () => ({
-    linksWrapMaxWidth: 0,
-    isMobile: false,
-  }),
+  model: {
+    prop: "isMobile",
+    event: "change",
+  },
+
+  props: {
+    isMobile: { type: Boolean, required: true },
+  },
 
   computed: {
     algoliaConfig(): AlgoliaOption | false {
@@ -65,25 +70,25 @@ export default Vue.extend({
   },
 
   mounted(): void {
-    // Refer to config.styl
-    const MOBILE_DESKTOP_BREAKPOINT = 719;
-    const NAVBAR_HORIZONTAL_PADDING =
-      parseInt(css(this.$el, "paddingLeft")) +
-      parseInt(css(this.$el, "paddingRight"));
+    const contentWidth =
+      (this.$refs.siteInfo
+        ? ((this.$refs.siteInfo as Vue).$el as HTMLElement).offsetWidth
+        : 0) +
+      (this.$refs.navLinks
+        ? (this.$refs.navLinks as HTMLElement).offsetWidth
+        : 0);
+
     const handler = (): void => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.isMobile = true;
-        this.linksWrapMaxWidth = 0;
-      } else {
-        this.isMobile = false;
-        this.linksWrapMaxWidth =
-          (this.$el as HTMLElement).offsetWidth -
-          NAVBAR_HORIZONTAL_PADDING -
-          ((this.$refs.siteInfo &&
-            (this.$refs.siteInfo as Vue).$el &&
-            ((this.$refs.siteInfo as Vue).$el as HTMLElement).offsetWidth) ||
-            0);
-      }
+      const { clientWidth } = document.documentElement;
+      const wrapperWidth = this.$el
+        ? clientWidth -
+          parseInt(css(this.$el, "paddingLeft")) -
+          parseInt(css(this.$el, "paddingRight"))
+        : 0;
+      const isMobile =
+        wrapperWidth < contentWidth || clientWidth <= MQ_MOBILE_NARROW + 1;
+      console.log("handler");
+      if (isMobile !== this.isMobile) this.$emit("change", isMobile);
     };
 
     handler();

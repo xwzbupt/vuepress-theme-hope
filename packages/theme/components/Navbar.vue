@@ -24,12 +24,7 @@
       >
     </RouterLink>
 
-    <div
-      :style="
-        linksWrapMaxWidth ? { 'max-width': `${linksWrapMaxWidth}px` } : {}
-      "
-      class="links"
-    >
+    <div ref="navLinks" class="links">
       <ThemeColor />
       <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algoliaConfig" />
       <SearchBox
@@ -60,7 +55,7 @@
   line-height $navbarHeight - $navbarVerticalPadding * 2
   transition transform 0.3s ease-in-out
 
-  @media (max-width $MQMobile)
+  .mobile &
     height $navbarMobileHeight
     padding $navbarMobileVerticalPadding $navbarMobileHorizontalPadding
     padding-left $navbarMobileHorizontalPadding + 2.4rem
@@ -81,7 +76,7 @@
     margin-right 0.8rem
     vertical-align top
 
-    @media (max-width $MQMobile)
+    .mobile &
       min-width $navbarMobileHeight - $navbarMobileVerticalPadding * 2
       height $navbarMobileHeight - $navbarMobileVerticalPadding * 2
 
@@ -100,7 +95,7 @@
         display block
 
   .can-hide
-    @media (max-width $MQMobile)
+    .mobile &
       display none
 
   .site-name
@@ -109,7 +104,7 @@
     color var(--text-color)
     position relative
 
-    @media (max-width $MQMobile)
+    .mobile &
       width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
@@ -125,7 +120,7 @@
     font-size 0.9rem
     white-space nowrap
 
-    @media (max-width $MQMobile)
+    .mobile &
       padding-left 0
       top $navbarMobileVerticalPadding
       right $navbarMobileHorizontalPadding

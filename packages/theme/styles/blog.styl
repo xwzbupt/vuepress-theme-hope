@@ -1,0 +1,36 @@
+.page.blog
+  box-sizing border-box
+  min-height 100vh
+  margin 0px auto
+  padding-top $navbarHeight
+  padding-bottom 2rem
+  background var(--bgcolor-light)
+  display flex
+  flex-direction column
+  justify-content space-between
+
+  .mobile &
+    padding $navbarMobileHeight 1rem 2rem
+
+    @media (max-width $MQMobileNarrow)
+      padding-left 0
+      padding-right 0
+
+  .blog-page-wrapper
+    width 100%
+    display flex
+    box-sizing border-box
+    margin 0 auto
+    justify-content center
+    align-items flex-start
+
+    padding 0 1rem
+      .mobile &
+        padding 0
+
+      .theme-container:not(.mobile) &
+        @media (min-width $MQNarrow)
+          padding 0 2rem
+
+        @media (min-width $MQWide)
+          padding 0

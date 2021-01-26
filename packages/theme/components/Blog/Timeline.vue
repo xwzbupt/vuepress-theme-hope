@@ -37,6 +37,11 @@
   padding 40px 0
   --dot-color #fff
 
+  // mobile
+  .mobile &
+    margin 0 1.2rem
+
+  // dark theme
   .theme-dark &
     --dot-color #505050
 
@@ -147,9 +152,5 @@
         .title
           font-size 16px
           line-height 30px
-
-@media (max-width $MQMobile)
-  .timeline-wrapper
-    margin 0 1.2rem
 </style>
 D

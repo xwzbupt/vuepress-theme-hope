@@ -33,7 +33,7 @@
       font-size 16px
       text-align left
 
-      @media (max-width $MQMobile)
+      .mobile &
         min-width calc(100vw - 4rem) !important
         max-width calc(100vw - 4rem) !important
 
@@ -73,7 +73,7 @@
       .algolia-docsearch-suggestion--wrapper
         padding 0
 
-        @media (max-width $MQMobile)
+        .mobile &
           padding 5px 7px 5px 5px !important
 
       .algolia-docsearch-suggestion--title
@@ -88,13 +88,13 @@
         background var(--bgcolor)
         color var(--text-color)
 
-        @media (min-width $MQMobile)
+        .theme-container:not(.mobile) &
           display table-cell
           float none
           width 150px
           min-width 150px
 
-        @media (max-width $MQMobile)
+        .mobile &
           padding 0 !important
           background white !important
 
@@ -105,7 +105,7 @@
         color #555
 
         &:after
-          @media (max-width $MQMobile)
+          .mobile &
             display inline-block
             vertical-align middle
             content ' > '
@@ -115,7 +115,7 @@
             line-height 14.4px
 
       .algolia-docsearch-suggestion--content
-        @media (min-width $MQMobile)
+        .theme-container:not(.mobile) &
           display table-cell
           float none
           vertical-align top

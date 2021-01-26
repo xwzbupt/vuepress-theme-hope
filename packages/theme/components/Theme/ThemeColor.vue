@@ -74,7 +74,7 @@
     transform translateX(-50%)
     z-index 150
 
-    @media (max-width $MQMobile)
+    .mobile &
       top $navbarMobileHeight - $navbarMobileVerticalPadding
       transform translateX(-80%)
 
@@ -88,7 +88,7 @@
       border-width 0 7px 7px
       transform translateX(-50%)
 
-      @media (max-width $MQMobile)
+      .mobile &
         left 80%
 
     &.menu-transition-enter-active, &.menu-transition-leave-active
@@ -103,7 +103,7 @@
       margin 0
       padding 0
 
-@media (max-width $MQMobile)
+.mobile &
   .color-picker
     .color-picker-menu
       left calc(50% - 35px)

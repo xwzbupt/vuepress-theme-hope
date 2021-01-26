@@ -32,7 +32,7 @@ body
   --docsearch-footer-height 44px
   --docsearch-footer-shadow 0 -1px 0 0 #e0e3e8, 0 -3px 6px 0 rgba(69, 98, 155, 0.12)
 
-  @media (max-width $MQMobile)
+  .mobile &
     --docsearch-searchbox-height 44px
     --docsearch-spacing 8px
     --docsearch-footer-height 40px
@@ -68,7 +68,7 @@ body.theme-dark
     position relative
     bottom -0.125em
 
-  @media (max-width $MQMobile)
+  .mobile &
     margin-right 0
 
     &:hover
@@ -192,7 +192,7 @@ body.theme-dark
   &::-webkit-search-cancel-button, &::-webkit-search-decoration, &::-webkit-search-results-button, &::-webkit-search-results-decoration
     display none
 
-  @media (max-width $MQMobile)
+  .mobile &
     font-size 1rem
 
 .DocSearch-LoadingIndicator, .DocSearch-MagnifierLabel, .DocSearch-Reset

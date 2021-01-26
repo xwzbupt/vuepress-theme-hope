@@ -29,7 +29,7 @@
     margin-top $navbarMobileHeight
     padding-left $mobileSidebarWidth
 
-  @media (max-width $MQMobile)
+  .mobile &
     padding-left 0
 
   &.expand

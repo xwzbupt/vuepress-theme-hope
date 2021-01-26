@@ -22,10 +22,9 @@
   color var(--dark-color, #666)
   text-align center
 
-  @media (min-width $MQMobile)
-    .has-sidebar &
-      padding-left $sidebarWidth
-      border-left 30px solid transparent
+  .has-sidebar:not(.mobile) &
+    padding-left $sidebarWidth
+    border-left 30px solid transparent
 
   & > div
     @media (max-width $MQMobileNarrow)

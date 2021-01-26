@@ -71,6 +71,10 @@ const themeAPI = (
 ): ThemeOptionAPI => ({
   alias: getAlias(themeConfig, ctx),
 
+  define: (): Record<string, number> => ({
+    MQ_MOBILE_NARROW: 419,
+  }),
+
   plugins: getPluginConfig(themeConfig),
 
   additionalPages:

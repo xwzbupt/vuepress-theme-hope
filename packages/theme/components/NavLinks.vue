@@ -30,7 +30,7 @@
     line-height 1.4rem
     color var(--dark-grey)
 
-    @media (max-width $MQMobile)
+    .mobile &
       color var(--text-color)
 
       &:hover, &.active
@@ -45,7 +45,7 @@
     margin-left 1rem
     line-height 2rem
 
-    @media (max-width $MQMobile)
+    .mobile &
       margin-left 0
 
     &:first-child
@@ -55,10 +55,10 @@
     color var(--dark-grey)
     margin-left 1.5rem
 
-    @media (max-width $MQMobile)
+    .mobile &
       margin-left 0
 
-@media (min-width $MQMobile)
+.theme-container:not(.mobile) &
   .nav-item > .nav-link
     &::after
       position absolute

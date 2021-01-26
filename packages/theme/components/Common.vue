@@ -8,7 +8,11 @@
     <Password v-if="isGlobalEncrypted" @password-verify="checkGlobalPassword" />
     <!-- Content -->
     <template v-else>
-      <Navbar v-if="enableNavbar" @toggle-sidebar="toggleSidebar" />
+      <Navbar
+        v-if="enableNavbar"
+        v-model="isMobile"
+        @toggle-sidebar="toggleSidebar"
+      />
 
       <div class="sidebar-mask" @click="toggleSidebar(false)" />
 
@@ -46,6 +50,6 @@
   height 100vh
   display none
 
-  .theme-container.sidebar-open &
+  .sidebar-open &
     display block
 </style>

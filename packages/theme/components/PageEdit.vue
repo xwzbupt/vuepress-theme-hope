@@ -17,7 +17,7 @@
 <script src="./PageEdit" />
 
 <style lang="stylus">
-@require '~@theme/styles/wrapper.styl'
+@require '~@mr-hope/vuepress-shared/styles/wrapper.styl'
 
 .page-edit
   @extend $wrapper

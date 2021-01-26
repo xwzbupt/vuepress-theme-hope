@@ -25,7 +25,7 @@
   margin-top -0.5rem - $navbarHeight
   padding-top $navbarHeight + 0.5rem
 
-  @media (max-width $MQMobile)
+  .mobile &
     margin-top -0.5rem - $navbarMobileHeight
     padding-top $navbarMobileHeight + 0.5rem
 

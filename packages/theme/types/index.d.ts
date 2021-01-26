@@ -5,3 +5,7 @@ import "./extend";
 export * from "./theme";
 
 export const config: (config: HopeVuePressConfig) => ResolvedHopeVuePressConfig;
+
+declare global {
+  const MQ_MOBILE_NARROW: number;
+}

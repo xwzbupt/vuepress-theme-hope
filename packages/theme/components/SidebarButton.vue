@@ -47,7 +47,7 @@
   &::after
     transform translateY(-0.4em) rotate(-135deg)
 
-@media (max-width $MQMobile)
+.mobile &
   .sidebar-button
     display block
 </style>

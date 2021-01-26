@@ -3,8 +3,9 @@ $wrapper
   margin 0 auto
   padding 2rem 2.5rem
 
-  @media (max-width: $MQNarrow)
+  @media (max-width $MQNarrow)
     padding 1.5rem
 
-  @media (max-width: $MQMobileNarrow)
-    padding 1rem 1.5rem
+  @media (max-width $MQMobileNarrow)
+    .mobile &
+      padding 1rem 1.5rem

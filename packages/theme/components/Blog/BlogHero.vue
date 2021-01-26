@@ -44,12 +44,12 @@
   margin-bottom 16px
   height 450px
 
-  @media (max-width $MQMobile)
+  .mobile &
     height 350px
     margin 0 -1.5rem 16px
 
-  @media (max-width $MQMobileNarrow)
-    margin 0 0 16px
+    @media (max-width $MQMobileNarrow)
+      margin 0 0 16px
 
   .mask
     position absolute
