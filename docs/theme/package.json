@@ -10,13 +10,15 @@
     "url": "https://mrhope.site"
   },
   "scripts": {
-    "docs:build": "vuepress build src",
-    "docs:clean-serve": "vuepress dev src --no-cache",
-    "docs:serve": "vuepress dev src"
+    "docs:build": "hopepress build src",
+    "docs:clean-serve": "hopepress dev src --no-cache",
+    "docs:serve": "hopepress dev src"
   },
   "devDependencies": {
     "axios": "0.24.0",
-    "vuepress": "1.8.2",
     "vuepress-theme-hope": "1.20.5"
+  },
+  "peerDependencies": {
+    "@mr-hope/vuepress-runtime": "1.9.0-alpha.1"
   }
 }

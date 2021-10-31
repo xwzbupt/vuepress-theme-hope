@@ -32,7 +32,7 @@
     "webpack-chain": "^6.5.1"
   },
   "peerDependencies": {
-    "vuepress": "^1.8.2"
+    "@mr-hope/vuepress-runtime": "1.9.0-alpha.1"
   },
   "publishConfig": {
     "access": "public"

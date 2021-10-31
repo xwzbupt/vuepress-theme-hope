@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-declare module "@vuepress/markdown/lib/lineNumbers" {
+declare module "@mr-hope/vuepress-markdown/lib/lineNumbers" {
   import MarkdownIt = require("markdown-it");
   const lineNumbers: (md: MarkdownIt) => void;
 

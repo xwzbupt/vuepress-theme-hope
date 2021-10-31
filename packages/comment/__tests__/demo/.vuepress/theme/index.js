@@ -1,3 +1,3 @@
 module.exports = {
-  extend: "@vuepress/theme-default",
+  extend: "@mr-hope/vuepress-theme-default",
 };

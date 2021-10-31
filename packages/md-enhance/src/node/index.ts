@@ -1,5 +1,5 @@
 import { resolve } from "path";
-import lineNumbers = require("@vuepress/markdown/lib/lineNumbers");
+import lineNumbers = require("@mr-hope/vuepress-markdown/lib/lineNumbers");
 
 import { codeDemoDefaultSetting } from "./markdown-it/code-demo";
 import decodeURL from "./markdown-it/decode-url";

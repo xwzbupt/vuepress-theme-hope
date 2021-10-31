@@ -6,13 +6,13 @@
   "license": "MIT",
   "author": "Mr.Hope",
   "scripts": {
-    "build": "vuepress build src",
-    "clean-serve": "vuepress dev src --no-cache",
-    "eject": "vuepress eject-hope src",
-    "serve": "vuepress dev src"
+    "build": "hopepress build src",
+    "clean-serve": "hopepress dev src --no-cache",
+    "eject": "hopepress eject-hope src",
+    "serve": "hopepress dev src"
   },
   "devDependencies": {
-    "vuepress": "1.8.2",
+    "@mr-hope/vuepress-runtime": "1.9.0-alpha.1",
     "vuepress-theme-hope": "1.20.5"
   }
 }
