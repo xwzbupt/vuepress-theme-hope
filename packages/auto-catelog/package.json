@@ -1,0 +1,51 @@
+{
+  "name": "vuepress-plugin-auto-catalog",
+  "version": "2.0.0-beta.13",
+  "description": "auto-catalog plugin for VuePress",
+  "keywords": [
+    "vuepress-plugin",
+    "vuepress",
+    "auto-catalog",
+    "mr-hope"
+  ],
+  "homepage": "https://github.com/vuepress-theme-hope/vuepress-theme-hope/packages/auto-catalog#readme",
+  "bugs": {
+    "url": "https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuepress-theme-hope/vuepress-theme-hope.git",
+    "directory": "packages/auto-catalog"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "mister-hope@outlook.com",
+    "name": "Mr.Hope",
+    "url": "https://mrhope.site"
+  },
+  "main": "lib/node/index.js",
+  "types": "lib/node/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf ./lib ./*.tsbuildinfo",
+    "demo:vite-build": "vuepress-vite build __tests__/demo",
+    "demo:vite-clean-serve": "vuepress-vite dev __tests__/demo --clean-cache",
+    "demo:vite-serve": "vuepress-vite dev __tests__/demo",
+    "demo:webpack-build": "vuepress-webpack build __tests__/demo",
+    "demo:webpack-clean-serve": "vuepress-webpack dev __tests__/demo --clean-cache",
+    "demo:webpack-serve": "vuepress-webpack dev __tests__/demo",
+    "dev": "yarn dev:ts",
+    "dev:ts": "tsc -b tsconfig.build.json --watch"
+  },
+  "dependencies": {
+    "@vuepress/core": "2.0.0-beta.36",
+    "@vuepress/utils": "2.0.0-beta.35"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
