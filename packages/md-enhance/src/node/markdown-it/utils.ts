@@ -1,5 +1,5 @@
-import type { default as StateBlock } from "markdown-it/lib/rules_block/state_block";
 import type { default as Token } from "markdown-it/lib/token";
+import type { RuleBlock } from "markdown-it/lib/parser_block";
 
 // https://spec.commonmark.org/0.29/#line-ending
 export const NEWLINES_RE = /\r\n?|\n/g;
@@ -50,23 +50,11 @@ export interface UMLOptions {
   close: string;
 }
 
-export const generateUML = (
-  options: UMLOptions
-): ((
-  state: StateBlock,
-  startLine: number,
-  endLine: number,
-  silent: boolean
-) => boolean) => {
+export const generateUML = (options: UMLOptions): RuleBlock => {
   const OPEN_MARKER = `@${options.open}`;
   const CLOSE_MARKER = `@${options.close}`;
 
-  return (
-    state: StateBlock,
-    startLine: number,
-    endLine: number,
-    silent: boolean
-  ): boolean => {
+  const umlRule: RuleBlock = (state, startLine, endLine, silent) => {
     let i;
     let autoClosed = false;
     let start = state.bMarks[startLine] + state.tShift[startLine];
@@ -154,4 +142,6 @@ export const generateUML = (
 
     return true;
   };
+
+  return umlRule;
 };

@@ -63,7 +63,7 @@ export const container: PluginWithOptions<MarkdownItContainerOptions> = (
     closeRender,
   } = { name: "" }
 ) => {
-  const minMarkers = 3;
+  const MIN_MARKER_NUM = 3;
   const markerCharacter = marker.charCodeAt(0);
   const markerLength = marker.length;
 
@@ -87,7 +87,7 @@ export const container: PluginWithOptions<MarkdownItContainerOptions> = (
 
     const markerCount = Math.floor((pos - start) / markerLength);
 
-    if (markerCount < minMarkers) return false;
+    if (markerCount < MIN_MARKER_NUM) return false;
 
     pos -= (pos - start) % markerLength;
 
