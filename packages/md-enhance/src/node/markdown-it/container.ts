@@ -68,22 +68,21 @@ export const container: PluginWithOptions<MarkdownItContainerOptions> = (
   const markerLength = marker.length;
 
   const container: RuleBlock = (state, startLine, endLine, silent) => {
-    let pos,
-      nextLine,
-      token,
-      autoClosed = false,
-      start = state.bMarks[startLine] + state.tShift[startLine],
-      max = state.eMarks[startLine];
+    let start = state.bMarks[startLine] + state.tShift[startLine];
+    let max = state.eMarks[startLine];
 
     // Check out the first character quickly,
     // this should filter out most of non-containers
     //
     if (markerCharacter !== state.src.charCodeAt(start)) return false;
 
+    let pos = start + 1;
+
     // Check out the rest of the marker string
-    //
-    for (pos = start + 1; pos <= max; pos++)
+    while (pos <= max) {
       if (marker[(pos - start) % markerLength] !== state.src[pos]) break;
+      pos += 1;
+    }
 
     const markerCount = Math.floor((pos - start) / markerLength);
 
@@ -102,7 +101,8 @@ export const container: PluginWithOptions<MarkdownItContainerOptions> = (
 
     // Search for the end of the block
     //
-    nextLine = startLine;
+    let nextLine = startLine;
+    let autoClosed = false;
 
     for (;;) {
       nextLine++;
@@ -154,17 +154,19 @@ export const container: PluginWithOptions<MarkdownItContainerOptions> = (
     // this will prevent lazy continuations from ever going past our end marker
     state.lineMax = nextLine;
 
-    token = state.push(`container_${name}_open`, "div", 1);
-    token.markup = markup;
-    token.block = true;
-    token.info = params;
-    token.map = [startLine, nextLine];
+    const openToken = state.push(`container_${name}_open`, "div", 1);
+
+    openToken.markup = markup;
+    openToken.block = true;
+    openToken.info = params;
+    openToken.map = [startLine, nextLine];
 
     state.md.block.tokenize(state, startLine + 1, nextLine);
 
-    token = state.push(`container_${name}_close`, "div", -1);
-    token.markup = state.src.slice(start, pos);
-    token.block = true;
+    const closeToken = state.push(`container_${name}_close`, "div", -1);
+
+    closeToken.markup = state.src.slice(start, pos);
+    closeToken.block = true;
 
     state.parentType = oldParent;
     state.lineMax = oldLineMax;
