@@ -9,9 +9,9 @@ icon: code
 
 ## 配置
 
-:::: code-group
+::: code-group
 
-::: code-group-item TS
+@codetab TS
 
 ```ts {8}
 // .vuepress/config.ts
@@ -27,9 +27,7 @@ export default {
 };
 ```
 
-:::
-
-::: code-group-item JS
+@codetab JS
 
 ```js {8}
 // .vuepress/config.js
@@ -47,56 +45,62 @@ module.exports = {
 
 :::
 
-::::
-
 ## 使用
 
-你需要在外围使用 `code-group` 容器，并仅在内部放置 `code-group-item` 容器。
+你需要使用 `code-group` 容器，并在内部放置 `@codetab` 标识和代码块。
 
-你需要给 `code-group-item` 容器设置标题，并将待展示的单个代码块放入 `code-group-item` 容器中。
+你需要在 `@codetab` 后设置标题。如果你需要令某个选项卡被默认激活，你可以在标识后补充 `:active` 后缀。
 
-如果你需要令某个选项卡被默认激活，你可以在标题后补充 `:active` 后缀。
+::: note
+
+`code-group` 容器只允许在 `@codetab` 标识之后的代码块，其他 Makrdown 内容均会被忽略。
+
+:::
 
 ## 演示
 
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab pnpm
 
 ```bash
-yarn add -D vuepress-theme-hope
+pnpm add -D vuepress-theme-hope@next
+```
+
+@codetab yarn
+
+```bash
+yarn add -D vuepress-theme-hope@next
+```
+
+@codetab:active npm
+
+```bash
+npm i -D vuepress-theme-hope@next
 ```
 
 :::
-
-::: code-group-item npm:active
-
-```bash
-npm i -D vuepress-theme-hope
-```
-
-:::
-
-::::
 
 ````md
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab pnpm
 
 ```bash
-yarn add -D vuepress-theme-hope
+pnpm add -D vuepress-theme-hope@next
+```
+
+@codetab yarn
+
+```bash
+yarn add -D vuepress-theme-hope@next
+```
+
+@codetab:active npm
+
+```bash
+npm i -D vuepress-theme-hope@next
 ```
 
 :::
-
-::: code-group-item npm:active
-
-```bash
-npm i -D vuepress-theme-hope
-```
-
-:::
-
-::::
 ````

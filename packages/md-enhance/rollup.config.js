@@ -45,10 +45,6 @@ export default [
     external: ["vue", /\.scss$/],
     dtsExternal: [/\.scss$/],
   }),
-  ...rollupTypescript("client/components/CodeGroupItem", {
-    external: ["vue", /\.scss$/],
-    dtsExternal: [/\.scss$/],
-  }),
   ...rollupTypescript("client/components/FlowChart", {
     external: [
       "@mr-hope/vuepress-shared/lib/client",

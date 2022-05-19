@@ -110,9 +110,9 @@ footer: MIT Licensed | Copyright © 2019-present Mr.Hope
 
 在当前项目的 `[dir]` 文件夹内创建 vuepress-theme-hope 项目:
 
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm create vuepress-theme-hope@next [dir]
@@ -120,15 +120,7 @@ pnpm create vuepress-theme-hope@next [dir]
 
 :::
 
-<!-- ::: code-group-item yarn
-
-```bash
-yarn create vuepress-theme-hope [dir]
-```
-
-::: -->
-
-::: code-group-item npm
+@codetab npm
 
 ```bash
 npm init vuepress-theme-hope@next [dir]
@@ -136,13 +128,11 @@ npm init vuepress-theme-hope@next [dir]
 
 :::
 
-::::
-
 ## 🚀 使用
 
-:::: code-group
+::: code-group
 
-::: code-group-item TS
+@codetab TS
 
 ```ts
 // .vuepress/config.ts
@@ -160,9 +150,7 @@ export default defineUserConfig({
 });
 ```
 
-:::
-
-::: code-group-item JS
+@codetab JS
 
 ```js
 // .vuepress/config.js
@@ -180,8 +168,6 @@ module.exports = {
 ```
 
 :::
-
-::::
 
 ## 使用教程
 

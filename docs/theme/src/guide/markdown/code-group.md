@@ -15,9 +15,9 @@ The theme provides you you code group support.
 
 ## Config
 
-:::: code-group
+::: code-group
 
-::: code-group-item TS
+@codetab TS
 
 ```ts {8-10}
 // .vuepress/config.ts
@@ -35,9 +35,7 @@ export default defineUserConfig({
 });
 ```
 
-:::
-
-::: code-group-item JS
+@codetab JS
 
 ```js {7-9}
 // .vuepress/config.js
@@ -56,56 +54,62 @@ module.exports = {
 
 :::
 
-::::
-
 ## Usage
 
-You need to use `code-group` container outside, and place only `code-group-item` container inside it.
+You need to use `code-group` container, inside it, place `@codetab` marker with code fence.
 
-You need to set title for each `code-group-item` container, and place one code block in each `code-group-item` container.
+If you want a tab be activated by default, you can append a `:active` suffix at the end of marker.
 
-If you want some item be activated by default, you can append a `:active` suffix at the end of title.
+::: note
+
+Only code fence after `@codetab` marker is allowed inside codegroup container, other markdown content will be ignored.
+
+:::
 
 ## Demo
 
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab pnpm
 
 ```bash
-yarn add -D vuepress-theme-hope
+pnpm add -D vuepress-theme-hope@next
+```
+
+@codetab yarn
+
+```bash
+yarn add -D vuepress-theme-hope@next
+```
+
+@codetab:active npm
+
+```bash
+npm i -D vuepress-theme-hope@next
 ```
 
 :::
-
-::: code-group-item npm:active
-
-```bash
-npm i -D vuepress-theme-hope
-```
-
-:::
-
-::::
 
 ````md
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab pnpm
 
 ```bash
-yarn add -D vuepress-theme-hope
+pnpm add -D vuepress-theme-hope@next
+```
+
+@codetab yarn
+
+```bash
+yarn add -D vuepress-theme-hope@next
+```
+
+@codetab:active npm
+
+```bash
+npm i -D vuepress-theme-hope@next
 ```
 
 :::
-
-::: code-group-item npm:active
-
-```bash
-npm i -D vuepress-theme-hope
-```
-
-:::
-
-::::
 ````

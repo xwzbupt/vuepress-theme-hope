@@ -8,9 +8,9 @@ tag:
   - 主题配置
 ---
 
-:::: code-group
+::: code-group
 
-::: code-group-item TS
+@codetab TS
 
 ```diff
   // .vuepress/config.ts
@@ -32,9 +32,7 @@ tag:
   });
 ```
 
-:::
-
-::: code-group-item JS
+@codetab JS
 
 ```diff
 // .vuepress/config.js
@@ -57,8 +55,6 @@ tag:
 ```
 
 :::
-
-::::
 
 ## 主题使用
 

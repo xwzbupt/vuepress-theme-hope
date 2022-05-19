@@ -92,25 +92,21 @@ copyright: false
 
 ### 安装
 
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm add -D vuepress-plugin-md-enhance@next
 ```
 
-:::
-
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-plugin-md-enhance@next
 ```
 
-:::
-
-::: code-group-item npm
+@codetab npm
 
 ```bash
 npm i -D vuepress-plugin-md-enhance@next
@@ -118,13 +114,11 @@ npm i -D vuepress-plugin-md-enhance@next
 
 :::
 
-::::
-
 ### 使用
 
-:::: code-group
+::: code-group
 
-::: code-group-item TS
+@codetab TS
 
 ```ts
 // .vuepress/config.ts
@@ -139,9 +133,7 @@ export default {
 };
 ```
 
-:::
-
-::: code-group-item JS
+@codetab JS
 
 ```js
 // .vuepress/config.js
@@ -157,8 +149,6 @@ module.exports = {
 ```
 
 :::
-
-::::
 
 ## 从 V1 迁移
 

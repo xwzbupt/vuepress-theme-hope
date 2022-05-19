@@ -35,33 +35,27 @@ Please use the options below and enable ONLY the feature you want to use.
 
 ### CodeGroup
 
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm add -D vuepress-plugin-md-enhance@next
 ```
 
-:::
-
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-plugin-md-enhance@next
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab npm:active
 
 ```bash
 npm i -D vuepress-plugin-md-enhance@next
 ```
 
 :::
-
-::::
 
 - [View Detail](code-group.md)
 

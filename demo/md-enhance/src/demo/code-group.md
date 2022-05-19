@@ -4,60 +4,48 @@ title: CodeGroup
 
 ## Demo
 
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab:active npm
 
 ```bash
 npm i -D vuepress-theme-hope
 ```
 
 :::
-
-::::
 
 ````md
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab:active npm
 
 ```bash
 npm i -D vuepress-theme-hope
 ```
 
 :::
-
-::::
 ````

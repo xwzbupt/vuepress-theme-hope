@@ -35,25 +35,21 @@ Frontmatter 是 VuePress 中很重要的一个概念，如果你不了解它，�
 
 ### 代码块
 
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab:active npm
 
 ```bash
 npm i -D vuepress-theme-hope
 ```
 
 :::
-
-::::
 
 - [查看详情](../markdown/code-group.md)
 

@@ -35,25 +35,21 @@ For these extended syntax, please see [Built-in Markdown Features](../../cookboo
 
 ### CodeGroup
 
-:::: code-group
+::: code-group
 
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab:active npm
 
 ```bash
 npm i -D vuepress-theme-hope
 ```
 
 :::
-
-::::
 
 - [View Detail](../markdown/code-group.md)
 

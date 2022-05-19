@@ -138,33 +138,27 @@ A custom details container
 
 ### CodeGroup
 
-:::: code-group
+::: code-group
 
-::: code-group-item pnpm
+@codetab pnpm
 
 ```bash
 pnpm add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item yarn
+@codetab yarn
 
 ```bash
 yarn add -D vuepress-theme-hope
 ```
 
-:::
-
-::: code-group-item npm:active
+@codetab npm:active
 
 ```bash
 npm i -D vuepress-theme-hope
 ```
 
 :::
-
-::::
 
 - [View Detail](https://vuepress-theme-hope.github.io/v2/guide/markdown/code-group.html)
 
