@@ -1,5 +1,5 @@
 import { defineComponent, h, onBeforeUpdate, ref } from "vue";
-import type { Component, VNode } from "vue";
+import type { FunctionalComponent, VNode } from "vue";
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 declare const __VUEPRESS_DEV__: boolean;
@@ -56,7 +56,10 @@ export default defineComponent({
 
       // get children code-group-item
       const items = (slots.default?.() || [])
-        .filter((vnode) => (vnode.type as Component).name === "CodeGroupItem")
+        .filter(
+          (vnode) =>
+            (vnode.type as FunctionalComponent).displayName === "CodeGroupItem"
+        )
         .map((vnode) => {
           if (vnode.props === null) vnode.props = {};
 
