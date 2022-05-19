@@ -1,5 +1,5 @@
 import { hash } from "@vuepress/utils";
-import { default as Token } from "markdown-it/lib/token";
+import type { default as Token } from "markdown-it/lib/token";
 
 export const echartsRender = (tokens: Token[], index: number): string => {
   const { nesting, info } = tokens[index];
