@@ -67,7 +67,6 @@ export const generateUML = (
     endLine: number,
     silent: boolean
   ): boolean => {
-    let nextLine;
     let i;
     let autoClosed = false;
     let start = state.bMarks[startLine] + state.tShift[startLine];
@@ -89,15 +88,16 @@ export const generateUML = (
     // Since start is found, we can report success here in validation mode
     if (silent) return true;
 
-    // Search for the end of the block
-    for (nextLine = startLine; ; nextLine += 1) {
-      if (nextLine >= endLine)
-        /*
-         * unclosed block should be autoclosed by end of document.
-         * also block seems to be autoclosed by end of parent
-         */
-        break;
+    let nextLine = startLine;
 
+    // Search for the end of the block
+    while (
+      /*
+       * unclosed block should be autoclosed by end of document.
+       * also block seems to be autoclosed by end of parent
+       */
+      nextLine < endLine
+    ) {
       start = state.bMarks[nextLine] + state.tShift[nextLine];
       max = state.eMarks[nextLine];
 
@@ -133,6 +133,8 @@ export const generateUML = (
           break;
         }
       }
+
+      nextLine += 1;
     }
 
     const contents = state.src
