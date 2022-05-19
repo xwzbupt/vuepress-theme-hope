@@ -74,6 +74,8 @@ module.exports = {
 :::
 ````
 
+`js` and `javascript` code block is also supported, and you are expected to assign your export object to `module.exports`.
+
 ## Demo
 
 ### Bar Chart
@@ -230,7 +232,7 @@ module.exports = {
 {
   "type": "line",
   "data": {
-    "labels": ["January", "Feburary", "March", "Apirl", "May", "June", "July"],
+    "labels": ["January", "Feburary", "March", "April", "May", "June", "July"],
     "datasets": [
       {
         "label": "My First Dataset",
@@ -255,7 +257,7 @@ module.exports = {
 {
   "type": "line",
   "data": {
-    "labels": ["January", "Feburary", "March", "Apirl", "May", "June", "July"],
+    "labels": ["January", "Feburary", "March", "April", "May", "June", "July"],
     "datasets": [
       {
         "label": "My First Dataset",

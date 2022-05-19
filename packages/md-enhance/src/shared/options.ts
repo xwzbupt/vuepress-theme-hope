@@ -39,7 +39,7 @@ export interface MarkdownEnhanceOptions {
    * - danger
    * - details
    *
-   * ⚠ The last 4 items conflict with default theme and will overide it’s style.
+   * ⚠ The last 4 items conflict with default theme and will override it’s style.
    *
    * 是否启用自定义容器
    *
@@ -176,6 +176,15 @@ export interface MarkdownEnhanceOptions {
    * @default false
    */
   chart?: boolean;
+
+  /**
+   * Whether to enable echarts support
+   *
+   * 是否启用 echarts 图表支持
+   *
+   * @default false
+   */
+  echarts?: boolean;
 
   /**
    * Whether to enable flowchart support

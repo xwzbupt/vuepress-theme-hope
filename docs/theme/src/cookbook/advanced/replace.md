@@ -83,6 +83,7 @@ Components:
 - `@theme-hope/components/HomeFeatures`: homepage features
 - `@theme-hope/components/HomeHero`: homepage logo and introduction
 - `@theme-hope/components/HomePage`: home page
+- `@theme-hope/components/Icon`: icon
 - `@theme-hope/components/MarkdownContent`: Markdown content
 - `@theme-hope/components/NormalPage`: normal page
 - `@theme-hope/components/PageFooter`: page footer
@@ -285,7 +286,7 @@ Components that provide slots are as follows:
 - `CommonWrapper`: `default`, `navbarLeft`, `navbarCenter`, `navbarRight`, `navScreenTop`, `navScreenBottom`, `sidebar`, `sidebarTop`, `sidebarBottom`
 - `HomeHero`: `heroImage`, `heroInfo`
 - `HomePage`: `top`, `center`, `bottom`
-- `NormalPage`: `top`, `contentBefore`, `contentAfter`, `botom`
+- `NormalPage`: `top`, `contentBefore`, `contentAfter`, `bottom`
 
 **Navigation Bar**:
 

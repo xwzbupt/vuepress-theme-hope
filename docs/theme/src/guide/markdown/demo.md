@@ -1,7 +1,7 @@
 ---
 title: Code Demo
 icon: discover
-index: 13
+index: 14
 category:
   - Markdown
 tag:
@@ -68,7 +68,7 @@ You should use the following syntax:
 ```html
 <!-- ↑ use available ones -->
 <!-- your code here -->
-<!-- you can have mutiple code block, but each language must appear only once. -->
+<!-- you can have multiple code block, but each language must appear only once. -->
 ```
 
 ```json
@@ -184,7 +184,7 @@ export default class App extends React.Component {
 
 You can use different language in your demo block.
 
-When you set language which can not run on browers, since the plugin is not able to resolve them, so demo display will be disabled. The plugin will only show the code and provide you a button to open it in CodePen.
+When you set language which can not run on browsers, since the plugin is not able to resolve them, so demo display will be disabled. The plugin will only show the code and provide you a button to open it in CodePen.
 
 Available HTML languages:
 

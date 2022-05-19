@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.0-beta.64](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-beta.63...v2.0.0-beta.64) (2022-05-19)
+
+### Features
+
+- **components:** add CodePen and PDF component ([1e4ebf7](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/1e4ebf7ac860d265fc88bd1ca86dfffa7c829477))
+- **theme:** rebuild structure sidebar ([9d8b3a0](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/9d8b3a03f1f822f8853f31c030929f1208f7db0b))
+- **theme:** support setting components ([306d276](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/306d276ed8a323d118af931596042b4798bbc282))
+
+### Bug Fixes
+
+- correct some typos ([#1842](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/1842)) ([f852ce6](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/f852ce6b19dd86f6e53d3b1d7ba6a724bd4eceaa))
+- **theme:** fix broken Icon ([0168bd0](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/0168bd0501f7e0f0a4180c13e570f77a1a18cc5b))
+- **theme:** fix TOC scroll issue ([31213ae](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/31213aeca3f949e3af85287d78c537271ae56656))
+
+## [2.0.0-beta.63](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-beta.62...v2.0.0-beta.63) (2022-05-18)
+
+### ⚠ BREAKING CHANGES
+
+- **md-enhance:** code-demo changed to normal-demo, vue-demo and react-demo
+
+### Features
+
+- **md-enhance:** add ECharts support ([#1840](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/1840)) ([f635dbc](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/f635dbc248799ae65d758fc4b465ebaad256f75a))
+- **md-enhance:** improve chart render ([f266f61](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/f266f61000560ca35d21abbd7a0a33a4c077cca2))
+- **md-enhance:** improve code demo header style ([b8df953](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/b8df95392b12addea6d7e9edcdba5743147f906f))
+- **md-enhance:** rebuild code-demo ([ca966d1](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/ca966d126ca1c87dd79368c00a834e9ed6eab34f))
+- **md-enhance:** support js and javascript blocks in chartjs and echarts ([7b139bf](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/7b139bf728538cb0df58485f95f8764a00559699))
+
+### Bug Fixes
+
+- **md-enhance:** improve chart pref ([afecfd3](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/afecfd3ab0a9ce3348774d73b664de5a950d97ce))
+- **sass-palette:** fix plugin issue, fix [#1841](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/1841) ([7fcec7c](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/7fcec7c5ebda82a0baf1e1bed031de81ceb7debf))
+- **theme:** stop calling pwaPlugin by default ([0adb836](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/0adb836ee0c1ff1e5532e6c3d02474f76acbdabb))
+
 ## [2.0.0-beta.62](https://github.com/vuepress-theme-hope/vuepress-theme-hope/compare/v2.0.0-beta.61...v2.0.0-beta.62) (2022-05-17)
 
 ### ⚠ BREAKING CHANGES
@@ -1290,7 +1324,7 @@ Since `vuepress` drop support for the `babel` way, `search` and `docsearch` opti
 
 ### Bug Fixes
 
-- **components:** allow mutiple $page ([1f9b8f7](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/1f9b8f731d0d47c407774cec0d586df3bcb2de20))
+- **components:** allow multiple $page ([1f9b8f7](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/1f9b8f731d0d47c407774cec0d586df3bcb2de20))
 - **components:** improve a11y ([cc506bc](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/cc506bc9651843dddbdd49fa4db39051350a52c9))
 - style fixes ([c9430f5](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/c9430f59f8a384e8fd90bc68a23307950fdea56d))
 - **theme:** fix navbar style ([92503bd](https://github.com/vuepress-theme-hope/vuepress-theme-hope/commit/92503bd7753ace84054ae700b22ee9701ca59ba6))
