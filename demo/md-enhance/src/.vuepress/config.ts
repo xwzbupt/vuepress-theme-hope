@@ -55,7 +55,6 @@ export default defineUserConfig({
   plugins: [
     mdEnhancePlugin({
       enableAll: true,
-      codegroup: false,
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },

@@ -36,38 +36,38 @@ export const CodeGroup = defineComponent({
     // refs of the tab buttons
     const tabRefs = ref<HTMLUListElement[]>([]);
 
+    // activate next tab
+    const activateNext = (index = activeIndex.value): void => {
+      activeIndex.value = index < tabRefs.value.length - 1 ? index + 1 : 0;
+      tabRefs.value[activeIndex.value].focus();
+    };
+
+    // activate previous tab
+    const activatePrev = (index = activeIndex.value): void => {
+      activeIndex.value = index > 0 ? index - 1 : tabRefs.value.length - 1;
+      tabRefs.value[activeIndex.value].focus();
+    };
+
+    // handle keyboard event
+    const keyboardHandler = (event: KeyboardEvent, index: number): void => {
+      if (event.key === " " || event.key === "Enter") {
+        event.preventDefault();
+        activeIndex.value = index;
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        activateNext();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        activatePrev();
+      }
+    };
+
     // after removing a code tab, we need to clear the ref
     // of the removed item to avoid issues caused by HMR
     if (__VUEPRESS_DEV__)
       onBeforeUpdate(() => {
         tabRefs.value = [];
       });
-
-    // activate next tab
-    const activateNext = (i = activeIndex.value): void => {
-      activeIndex.value = i < tabRefs.value.length - 1 ? i + 1 : 0;
-      tabRefs.value[activeIndex.value].focus();
-    };
-
-    // activate previous tab
-    const activatePrev = (i = activeIndex.value): void => {
-      activeIndex.value = i > 0 ? i - 1 : tabRefs.value.length - 1;
-      tabRefs.value[activeIndex.value].focus();
-    };
-
-    // handle keyboard event
-    const keyboardHandler = (event: KeyboardEvent, i: number): void => {
-      if (event.key === " " || event.key === "Enter") {
-        event.preventDefault();
-        activeIndex.value = i;
-      } else if (event.key === "ArrowRight") {
-        event.preventDefault();
-        activateNext(i);
-      } else if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        activatePrev(i);
-      }
-    };
 
     return (): VNode | null => {
       // NOTICE: here we put the `slots.default()` inside the render function to make
